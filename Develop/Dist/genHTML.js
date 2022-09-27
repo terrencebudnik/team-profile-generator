@@ -24,6 +24,53 @@ function genHTML() {
 </html>
    `
 }
-module.exports = genHTML; 
+module.exports = genHTML;
 
-function 
+function managerHTML(response) {
+    return `
+    <div class="col">
+            <div class="card">
+                 <div class="card-header">${response.name}</div>
+                 <div class="card-body">
+                    <ul style="list-style:none">
+                        <li>${response.id}</li>
+                        <li>${response.email}</li>
+                        <li>${response.office}</l>
+                    </ul>
+                 </div>
+            </div>
+        </div>`
+}
+
+function engineerHTML(response) {
+    return `
+<div class="col">
+     <div class="card">
+          <div class="card-header">${response.name}</div>
+                <div class="card-body">
+                    <ul style="list-style:none">
+                        <li>${response.id}</li>
+                        <li>${response.email}</li>
+                        <li>${response.git}</li>
+                    </ul>
+               </div>
+           </div>
+      </div>
+</div>`
+}
+
+function internHTML(response) {
+    return `
+<div class="col">
+        <div class="card">
+             <div class="card-header">${response.name}</div>
+             <div class="card-body">
+                <ul style="list-style:none">
+                    <li>${response.id}</li>
+                    <li>${response.email}</li>
+                    <li>${response.school}</l>
+                </ul>
+             </div>
+        </div>
+    </div>`
+}
