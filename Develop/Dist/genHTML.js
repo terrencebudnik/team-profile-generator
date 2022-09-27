@@ -1,5 +1,5 @@
 function genHTML() {
-return `
+    return `
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,44 +17,7 @@ return `
     </div>
 </nav>
 <div class="container-fluid d-flex justify-content-center" style="margin-top:20px">
-    <div class="row d-flex justify-content-center">
-        <div class="col">
-            <div class="card">
-                 <div class="card-header">Title</div>
-                 <div class="card-body">
-                    <ul style="list-style:none">
-                        <li>ID</li>
-                        <li>Email</li>
-                        <li>Office Number</l>
-                    </ul>
-                 </div>
-            </div>
-        </div>
-        
-        <div class="col">
-            <div class="card">
-                <div class="card-header">Title</div>
-                <div class="card-body">
-                    <ul style="list-style:none">
-                        <li>ID</li>
-                        <li>Email</li>
-                        <li>Office Number</l>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-header">Title</div>
-                <div class="card-body">
-                    <ul style="list-style:none">
-                        <li>ID</li>
-                        <li>Email</li>
-                        <li>Office Number</l>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <div class="row d-flex justify-content-center"></div>
 </div>
 
 </body>
@@ -62,3 +25,5 @@ return `
    `
 }
 module.exports = genHTML; 
+
+function 

@@ -4,22 +4,21 @@ class Employee {
     this.id = id;
     this.email = email;
   }
+  getName(){
+    return this.name;
+  }
+  getId(){
+    return this.id;
+  }
+  getEmail(){
+    return this.email;
+  }
+  getRole(){
+    return 'Employee';
+  }
+
 }
 
-class Manager extends Employee {
-  constructor(office) {
-    this.office = office;
-  }
-}
+module.exports=Employee; 
 
-class Engineer extends Employee {
-  constructor(git) {
-    this.git = git;
-  }
-}
 
-class Intern extends Employee {
-  constructor(school) {
-    this.school = school;
-  }
-}
