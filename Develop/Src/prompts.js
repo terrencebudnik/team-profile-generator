@@ -1,5 +1,8 @@
-const fs = require('fs');
 const inquirer  = require('inquirer');
+const managerHTML = require('../Dist/genHTML.js');
+const engineerHTML = require('../Dist/genHTML.js');
+const internHTML = require('../Dist/genHTML.js');
+
 
 function managerPrompt() {
     inquirer
@@ -26,8 +29,7 @@ function managerPrompt() {
             }
         ])
         .then((response) => {
-            const manager = new Manager(response.name, response.id, response.email, response.office);
-            employeeList.push(manager);
+            managerHTML(response)
         })
         .then(addEmployee())
 }
@@ -43,7 +45,9 @@ function addEmployee() {
                 .then((response) => {
                     if (response.new === true) {
                         employeeType();
-                    } else { }
+                    } else {
+                        console.log("Check out your new team page!")
+                     }
 
                 })
 
@@ -97,9 +101,9 @@ function engineerPrompt() {
         ])
 
         .then((response) => {
-            const engineer = new Engineer(response.name, response.id, response.email, response.github);
-            employeeList.push(engineer);
+            engineerHTML(response)
         })
+        .then(addEmployee())
 }
 
 function internPrompt() {
@@ -128,11 +132,9 @@ function internPrompt() {
         ])
 
         .then((response) => {
-            const engineer = new Engineer(response.name, response.id, response.email, response.github);
-            employeeList.push(engineer);
+            internHTML(response)
         })
+        .then(addEmployee())
 }
 
-module.exports = {
-    managerPrompt
-}
+module.exports = managerPrompt; 

@@ -1,4 +1,4 @@
-function genHTML() {
+function createHTML () {
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,6 @@ function genHTML() {
 </html>
    `
 }
-module.exports = genHTML;
 
 function managerHTML(response) {
     return `
@@ -74,3 +73,9 @@ function internHTML(response) {
         </div>
     </div>`
 }
+
+
+
+module.exports = 
+    createHTML
+

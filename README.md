@@ -7,5 +7,10 @@
 [Demo Video]()
 
 
-### Process
+### Process  
+Using node.js and javascript to create an HTML on the back-end  
+Importing/requiring 'fs' and 'inquirer' to create the files and produces the prompts
+
+### Testing  
+Utilizing 'jest' to perform the applicable tests to ensure consistency and functionality 
 
