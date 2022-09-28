@@ -2,20 +2,20 @@ const Employee = require('./employee');
 
 
 class Manager extends Employee {
-    constructor(officeNumber) {
+    constructor(name, id, email, officeNumber) {
+      
+      super(name, id, email)
       this.officeNumber = officeNumber;
     }
     getRole(){
         return 'Manager';
     }
-    getOffice(){
+    getOfficeNumber(){
         return this.officeNumber; 
     }
   }
 
 
-
-module.exports = managerPrompt;
-
+  module.exports=Manager; 
 
 

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { default: inquirer } = require('inquirer');
+const inquirer  = require('inquirer');
 
 function managerPrompt() {
     inquirer
@@ -29,6 +29,7 @@ function managerPrompt() {
             const manager = new Manager(response.name, response.id, response.email, response.office);
             employeeList.push(manager);
         })
+        .then(addEmployee())
 }
 
 function addEmployee() {
@@ -39,16 +40,16 @@ function addEmployee() {
                 message: "Would you like to add an additional team member?",
                 name: 'new',
             }
-        .then((response) => {
-            if (response.new === true){
-                employeeType();
-            } else{}
-                
-            })
-            
-        ])   
-}            
-            
+                .then((response) => {
+                    if (response.new === true) {
+                        employeeType();
+                    } else { }
+
+                })
+
+        ])
+}
+
 function employeeType() {
     inquirer.
         prompt([
@@ -58,12 +59,13 @@ function employeeType() {
                 name: 'position',
                 choices: ["Engineer", "Intern"],
             }
-        .then((response) => {
-                if (response.position === "Engineer"){
-                    engineerPrompt();
-                } else{
-                    internPrompt(); 
-                }
+                .then((response) => {
+                    if (response.position === "Engineer") {
+                        engineerPrompt();
+                    } else {
+                        internPrompt();
+                    }
+                })
         ])
 }
 
@@ -125,9 +127,12 @@ function internPrompt() {
             }
         ])
 
-    .then((response) => {
-        fs.appendFile('index.html', internHTML(response), (err) => {
-            if (err === true) {
-                console.log("Error")
-            }
-})
+        .then((response) => {
+            const engineer = new Engineer(response.name, response.id, response.email, response.github);
+            employeeList.push(engineer);
+        })
+}
+
+module.exports = {
+    managerPrompt
+}

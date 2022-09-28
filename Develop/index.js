@@ -1,8 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const genHTML = require('./Dist/genHTML'); 
-const managerPrompt = require('./Lib/manager')
+const managerPrompt = require('./Src/prompts')
 
+function init() {
 inquirer
 .prompt([
   {
@@ -14,8 +15,8 @@ inquirer
 
 .then((response)=> {
   fs.writeFile('index.html', genHTML(),(err) =>
-    err ? console.log(err) : managerPrompt(response))
+    err ? console.log(err) : managerPrompt())
 })
+}
 
-module.exports = inquirer; 
-
+init()
