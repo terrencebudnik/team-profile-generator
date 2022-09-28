@@ -3,8 +3,8 @@
 ## Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person
 
 ## Application  
-![Screenshoot]()  
-[Demo Video]()
+![Screenshoot](./screenshot.jpg)  
+[Demo Video](https://watch.screencastify.com/v/WMZFUmmAZNiMBgjLq3ub)
 
 
 ### Process  
