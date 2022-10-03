@@ -163,50 +163,49 @@ function init() {
 }
 
 function managerHTML(response) {
-  return `<div class="col-4">
-          <div class="card">
-              <div class="card-header">${response.name}</div>
+  return `<div class="col">
+          <div class="card" style="width:max-content">
+              <div class="card-header bg-success text-white">Manager Name: ${response.name}</div>
               <div class="card-body">
                   <ul style="list-style:none">
-                      <li>${response.idNumber}</li>
-                      <li>${response.email}</li>
-                      <li>${response.office}</l>
+                      <li>ID Number: ${response.idNumber}</li>
+                      <li>Email: <span><a href="mailto:${response.email}">${response.email}</a></span></li>
+                      <li>Office Number: ${response.office}</l>
                   </ul>
               </div>
           </div>
       </div>`
 }
 function engineerHTML(response) {
-  return `<div class="col-4">
-          <div class="card">
-              <div class="card-header">${response.name}</div>
+  return `<div class="col">
+          <div class="card" style="width:max-content">
+              <div class="card-header">Engineer Name: ${response.name}</div>
               <div class="card-body">
                   <ul style="list-style:none">
-                      <li>${response.idNumber}</li>
-                      <li>${response.email}</li>
-                      <li>${response.github}</l>
+                      <li>ID Number: ${response.idNumber}</li>
+                      <li>Email: <span><a href="mailto:${response.email}">${response.email}</a></span></li>
+                      <li>GitHub Username: <span><a href="https://github.com/${response.github}">${response.github}</a></span></li>
                   </ul>
               </div>
           </div>
-      </div>`
+      </div>` 
 }
 
 function internHTML(response) {
-  return `<div class="col-4">
-          <div class="card">
-              <div class="card-header">${response.name}</div>
+  return `<div class="col">
+          <div class="card" style="width:max-content">
+              <div class="card-header">Intern Name: ${response.name}</div>
               <div class="card-body">
                   <ul style="list-style:none">
-                      <li>${response.idNumber}</li>
-                      <li>${response.email}</li>
-                      <li>${response.school}</l>
+                      <li>ID Number: ${response.idNumber}</li>
+                      <li>Email: <span><a href="mailto:${response.email}">${response.email}</a></span></li>
+                      <li>School: ${response.school}</l>
                   </ul>
               </div>
           </div>
       </div>
     </div>
-  </body>
-  </html>`
+  `
 }
 
 function genHTML() {
